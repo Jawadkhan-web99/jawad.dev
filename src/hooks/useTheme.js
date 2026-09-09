@@ -8,6 +8,12 @@ export function useTheme() {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('portfolio-theme', theme);
+
+    // Automatically update favicon based on active theme
+    const faviconTag = document.getElementById('faviconTag');
+    if (faviconTag) {
+      faviconTag.href = theme === 'dark' ? '/favicon-dark.svg' : '/favicon-light.svg';
+    }
   }, [theme]);
 
   const toggleTheme = () => {
