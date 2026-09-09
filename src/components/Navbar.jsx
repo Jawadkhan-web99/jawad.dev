@@ -33,7 +33,7 @@ export default function Navbar({ theme, toggleTheme }) {
         <a className="navbar-brand" href="#home">
           <span className="brand-bracket">&lt;</span>
           <span className="brand-name">Jawad</span>
-          <span className="brand-accent">Khan</span>
+          <span className="brand-accent">.dev</span>
           <span className="brand-bracket">/&gt;</span>
         </a>
 

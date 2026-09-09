@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-brand">
             <span className="brand-bracket">&lt;</span>
             <span className="brand-name">Jawad</span>
-            <span className="brand-accent">Khan</span>
+            <span className="brand-accent">.dev</span>
             <span className="brand-bracket">/&gt;</span>
           </div>
           <p className="footer-copy mb-0">
