@@ -1,31 +1,7 @@
-/**
- * ============================================================
- * PROJECTS DATA — projects.js
- * ============================================================
- *
- * HOW TO ADD A NEW PROJECT:
- * -------------------------
- * Simply add a new object to the `projects` array below.
- *
- * REQUIRED FIELDS:
- *   title        — Project name (string)
- *   image        — Path to screenshot, e.g. "images/my-project.png"
- *                  Leave as "" to show a default placeholder.
- *   description  — Short description shown on the card (1–2 sentences)
- *   technologies — Array of tech names, e.g. ["React", "Node.js"]
- *   category     — One of: "Frontend" | "Backend" | "Full Stack"
- *   liveLink     — Full URL to the live demo (use "#" if not deployed yet)
- *   githubLink   — Full URL to the GitHub repository
- *
- * ============================================================
- */
-
-const projects = [
-
+export const projects = [
   /* ═══════════════════════════════════════
      FRONTEND PROJECTS
   ═══════════════════════════════════════ */
-
   {
     title: "DriveLux Motors — Luxury Car Showroom",
     image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
@@ -36,10 +12,9 @@ const projects = [
     liveLink: "https://car-showroom-website-554s.vercel.app/",
     githubLink: "https://github.com/jawadkh92552417"
   },
-
   {
     title: "TravelX — Travel Agency Website",
-    image: "images/travelx.png",
+    image: "/images/travelx.png",
     description:
       "A fully responsive travel agency website with destination galleries, animated hero sections, tour packages UI, and smooth scroll interactions. Optimized for all screen sizes.",
     technologies: ["HTML5", "CSS3", "Bootstrap 5", "JavaScript"],
@@ -47,10 +22,9 @@ const projects = [
     liveLink: "https://travel-website-project-smtj.vercel.app/",
     githubLink: "https://github.com/jawadkh92552417/travelx"
   },
-
   {
     title: "pH Scale — Interactive Tool",
-    image: "images/phscale.png",
+    image: "/images/phscale.png",
     description:
       "An interactive educational pH scale visualization showing acidity and alkalinity levels from 0 to 14. Clean UI with color-coded indicators and real-time value display.",
     technologies: ["HTML5", "CSS3", "JavaScript"],
@@ -58,10 +32,9 @@ const projects = [
     liveLink: "https://https-github-com-jawadkhan-web99-my.vercel.app/",
     githubLink: "https://github.com/jawadkh92552417"
   },
-
   {
     title: "MediCare — Hospital Website",
-    image: "images/hospital.png",
+    image: "/images/hospital.png",
     description:
       "A professional hospital management website featuring doctor profiles, department listings, appointment booking form, and a trust-focused medical design.",
     technologies: ["HTML5", "CSS3", "JavaScript"],
@@ -69,10 +42,9 @@ const projects = [
     liveLink: "https://hospital-website.vercel.app",
     githubLink: "https://github.com/jawadkh92552417/hospital-website"
   },
-
   {
     title: "ShopZone — React E-Commerce",
-    image: "images/ecommerce.png",
+    image: "/images/ecommerce.png",
     description:
       "A feature-rich e-commerce store built with React. Includes product listing, cart management with Context API, category filtering, and localStorage persistence.",
     technologies: ["React", "CSS3", "Context API", "React Router"],
@@ -84,10 +56,9 @@ const projects = [
   /* ═══════════════════════════════════════
      BACKEND PROJECTS
   ═══════════════════════════════════════ */
-
   {
     title: "TaskFlow — REST API",
-    image: "images/taskapi.png",
+    image: "/images/taskapi.png",
     description:
       "A secure REST API for task management with full CRUD operations, JWT-based authentication, role-based access control, and MongoDB persistence. Fully documented via Postman.",
     technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "REST API"],
@@ -95,10 +66,9 @@ const projects = [
     liveLink: "#",
     githubLink: "https://github.com/jawadkh92552417/task-manager-api"
   },
-
   {
     title: "AuthGuard — User Auth API",
-    image: "images/authapi.png",
+    image: "/images/authapi.png",
     description:
       "A robust authentication API with register/login, JWT access + refresh tokens, bcrypt password hashing, and protected route middleware. Production-ready structure.",
     technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "bcrypt"],
@@ -110,27 +80,45 @@ const projects = [
   /* ═══════════════════════════════════════
      FULL STACK PROJECTS
   ═══════════════════════════════════════ */
-
+  {
+    title: "Blingg — Luxury Jewelry E-Commerce",
+    image: "/images/blingg.png",
+    description:
+      "A luxury full-stack e-commerce jewelry store platform featuring fine collections (rings, bracelets, earrings, necklaces), interactive shopping bag, smooth Lenis scrolling, and GSAP animations.",
+    technologies: ["Full Stack", "JavaScript", "GSAP", "Lenis Scroll", "Swiper.js", "REST API"],
+    category: "Full Stack",
+    liveLink: "https://e-commerce-website-seven-swart.vercel.app/",
+    githubLink: "https://github.com/jawadkh92552417/e-commerce-website"
+  },
+  {
+    title: "NEUROFIT — AI Fitness & Training",
+    image: "/images/neurofit.png",
+    description:
+      "An elite AI-powered fitness and smart performance training platform engineered with 3D graphics (Three.js), dynamic progression metrics, interactive coaching, and GSAP animations.",
+    technologies: ["Full Stack", "Three.js", "GSAP", "AI Integration", "Interactive 3D", "Lucide"],
+    category: "Full Stack",
+    liveLink: "https://gym-website-pi-nine.vercel.app/",
+    githubLink: "https://github.com/jawadkh92552417/gym-website"
+  },
   {
     title: "Jawad's Dev Portfolio",
-    image: "images/portfolio.png",
+    image: "/images/portfolio.png",
     description:
-      "This portfolio website — built from scratch with vanilla HTML, CSS, and JavaScript. Features dark/light mode, animated UI, project showcase system, and a working contact form.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Web3Forms"],
+      "This portfolio website — built with React and modern tooling. Features dark/light mode, animated UI, project showcase system, and a working contact form.",
+    technologies: ["React", "Vite", "HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Web3Forms"],
     category: "Full Stack",
     liveLink: "#",
     githubLink: "https://github.com/jawadkh92552417"
   },
-
   {
     title: "MERN Blog Platform",
-    image: "images/blog.png",
+    image: "/images/blog.png",
     description:
       "A full-stack blog platform with JWT authentication, rich-text post creation, comments, and an admin dashboard — built on the complete MERN stack.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "JWT"],
     category: "Full Stack",
     liveLink: "https://mern-blog-jk.vercel.app",
     githubLink: "https://github.com/jawadkh92552417/mern-blog"
-  },
-
+  }
 ];
+

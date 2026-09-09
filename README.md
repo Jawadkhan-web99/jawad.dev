@@ -1,22 +1,40 @@
 # Jawad Khan — Project Showcase Portfolio
 
-A modern, fully responsive developer portfolio built with HTML5, CSS3, JavaScript, and Bootstrap 5.
+A modern, lightning-fast, fully responsive developer portfolio built with React 18, Vite, CSS3, and Bootstrap 5.
+
+---
+
+## ⚡ Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server (opens at http://localhost:3000)
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
 
 ---
 
 ## Live Features
 
-- Dark / Light mode toggle (saved to localStorage)
-- Animated hero with typed-text role rotation
-- Scroll-reveal animations (AOS)
-- Skills section with animated progress bars
-- Dynamic project cards — generated entirely from a JavaScript array
-- Category filter buttons (All / Frontend / Backend / Full Stack / React / MERN)
-- Live project search (by name, technology, or category)
-- Project details modal on card click
-- Contact form with validation
-- Sticky glassmorphism navbar with active-link tracking
-- Fully responsive — mobile, tablet, laptop, desktop
+- ⚡ **Ultra Fast React 18 + Vite** build system & instant HMR
+- 🌓 Dark / Light mode toggle (saved to `localStorage`)
+- ✍️ Animated hero with typewriter role rotation (`useTypedText` hook)
+- 🎭 Scroll-reveal animations (AOS)
+- 📊 Interactive skills section with animated progress bars
+- 🗂️ 3-Panel Project Showcase system (Frontend, Backend, Full Stack with live counts)
+- 🔍 Instant client-side search & category filtering
+- 🖼️ Rich project details modal popup
+- 📬 Contact form with Web3Forms integration & live validation
+- 🔮 Interactive subtle neon cursor glow trail
+- 📱 Fully responsive across all devices (Mobile, Tablet, Desktop)
 
 ---
 
@@ -24,46 +42,52 @@ A modern, fully responsive developer portfolio built with HTML5, CSS3, JavaScrip
 
 ```
 project-portfolio/
-│
-├── index.html            ← Main HTML file
-│
-├── css/
-│   └── style.css         ← All styles (dark/light themes, animations, layout)
-│
-├── js/
-│   ├── projects.js       ← ⭐ YOUR PROJECT DATA (edit this to add projects)
-│   └── script.js         ← All JS functionality (do not edit unless customising)
-│
-├── images/
-│   ├── profile.png       ← Your profile photo (optional)
-│   └── *.png             ← Project screenshots
-│
-└── README.md
+├── index.html            ← Vite entry HTML
+├── package.json          ← Scripts and dependencies
+├── vite.config.js        ← Vite React configuration
+├── public/               ← Static assets (images, profile photo)
+│   ├── images/
+│   │   └── profile.png
+│   └── jwd.png
+├── src/
+│   ├── main.jsx          ← React DOM root entry
+│   ├── App.jsx           ← Main application component
+│   ├── style.css         ← Global styles & animations
+│   ├── data/
+│   │   └── projects.js   ← ⭐ YOUR PROJECT DATA (edit here to add projects)
+│   ├── hooks/
+│   │   ├── useTheme.js   ← Dark/Light mode hook
+│   │   └── useTypedText.js ← Typewriter effect hook
+│   └── components/
+│       ├── Navbar.jsx
+│       ├── Hero.jsx
+│       ├── About.jsx
+│       ├── Skills.jsx
+│       ├── ProjectsPanels.jsx
+│       ├── ShowcaseOverlay.jsx
+│       ├── ProjectModal.jsx
+│       ├── Contact.jsx
+│       ├── Footer.jsx
+│       ├── WhatsAppFloat.jsx
+│       ├── BackToTop.jsx
+│       └── CursorTrail.jsx
 ```
 
 ---
 
 ## How to Add a New Project
 
-Open `js/projects.js` and add a new object to the `projects` array.  
-**That's it — the card appears automatically. No HTML editing required.**
-
-### Step-by-step
-
-1. Take a screenshot of your project (recommended size: 1280 × 720 px).
-2. Save it in the `images/` folder, e.g. `images/my-new-project.png`.
-3. Open `js/projects.js`.
-4. Add the following block inside the `projects` array (before the closing `]`):
+Open `src/data/projects.js` and add a new object to the `projects` array:
 
 ```js
 {
   title: "My New Project",
-  image: "images/my-new-project.png",
-  description: "A short description of what the project does. Keep it to 1–2 sentences.",
+  image: "/images/my-new-project.png",
+  description: "A short description of what the project does.",
   technologies: ["React", "Node.js", "MongoDB"],
-  category: "MERN",
+  category: "Full Stack",
   liveLink: "https://my-new-project.vercel.app",
-  githubLink: "https://github.com/jawadkhan/my-new-project"
+  githubLink: "https://github.com/jawadkh92552417/my-new-project"
 },
 ```
 

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jawad Khan - Web Developer | Frontend Developer | MERN Stack Developer. Explore my projects, skills, and get in touch." />
+  <meta name="keywords" content="Jawad Khan, Web Developer, Frontend Developer, MERN Stack, Portfolio, Projects" />
+  <meta name="author" content="Jawad Khan" />
+  <meta property="og:title" content="Jawad Khan | Web Developer Portfolio" />
+  <meta property="og:description" content="Professional portfolio showcasing web development projects by Jawad Khan." />
+  <meta property="og:type" content="website" />
+  <title>Jawad Khan | Web Developer Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div id="pageLoader" role="status" aria-label="Loading">
+  <div class="loader-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
+      <defs>
+        <clipPath id="pencil-eraser">
+          <rect height="30" width="30" ry="5" rx="5"></rect>
+        </clipPath>
+      </defs>
+      <circle transform="rotate(-113,100,100)" stroke-linecap="round" stroke-dashoffset="439.82" stroke-dasharray="439.82 439.82" stroke-width="2" stroke="currentColor" fill="none" r="70" class="pencil__stroke"></circle>
+      <g transform="translate(100,100)" class="pencil__rotate">
+        <g fill="none">
+          <circle transform="rotate(-90)" stroke-dashoffset="402" stroke-dasharray="402.12 402.12" stroke-width="30" stroke="hsl(223,90%,50%)" r="64" class="pencil__body1"></circle>
+          <circle transform="rotate(-90)" stroke-dashoffset="465" stroke-dasharray="464.96 464.96" stroke-width="10" stroke="hsl(223,90%,60%)" r="74" class="pencil__body2"></circle>
+          <circle transform="rotate(-90)" stroke-dashoffset="339" stroke-dasharray="339.29 339.29" stroke-width="10" stroke="hsl(223,90%,40%)" r="54" class="pencil__body3"></circle>
+        </g>
+        <g transform="rotate(-90) translate(49,0)" class="pencil__eraser">
+          <g class="pencil__eraser-skew">
+            <rect height="30" width="30" ry="5" rx="5" fill="hsl(223,90%,70%)"></rect>
+            <rect clip-path="url(#pencil-eraser)" height="30" width="5" fill="hsl(223,90%,60%)"></rect>
+            <rect height="20" width="30" fill="hsl(223,10%,90%)"></rect>
+            <rect height="20" width="15" fill="hsl(223,10%,70%)"></rect>
+            <rect height="20" width="5" fill="hsl(223,10%,80%)"></rect>
+            <rect height="2" width="30" y="6" fill="hsla(223,10%,10%,0.2)"></rect>
+            <rect height="2" width="30" y="13" fill="hsla(223,10%,10%,0.2)"></rect>
+          </g>
+        </g>
+        <g transform="rotate(-90) translate(49,-30)" class="pencil__point">
+          <polygon points="15 0,30 30,0 30" fill="hsl(33,90%,70%)"></polygon>
+          <polygon points="15 0,6 30,0 30" fill="hsl(33,90%,50%)"></polygon>
+          <polygon points="15 0,20 10,10 10" fill="hsl(223,10%,10%)"></polygon>
+        </g>
+      </g>
+    </svg>
+    <p class="loader-text">Loading<span class="loader-dots"></span></p>
+  </div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <span class="brand-bracket"</span>
+      <span class="brand-name">Jawad</span>
+      <span class="brand-accent">Khan</span>
+      <span class="brand-bracket"></span>
+    </a>
+
+    <div class="d-flex align-items-center gap-3 order-lg-last">
+      <!-- Dark/Light Mode Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-icon">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero-section" id="home" aria-label="Hero section">
+  <!-- Animated background particles -->
+  <div class="hero-bg-animation" aria-hidden="true">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="floating-code code-1" aria-hidden="true">&lt;div&gt;</div>
+    <div class="floating-code code-2" aria-hidden="true">const dev = () =&gt; {}</div>
+    <div class="floating-code code-3" aria-hidden="true">.css { }</div>
+    <div class="floating-code code-4" aria-hidden="true">npm install</div>
+    <div class="floating-code code-5" aria-hidden="true">{ ...MERN }</div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center min-vh-100 py-5">
+      <!-- Text Content -->
+      <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-duration="900">
+        <div class="hero-badge mb-3">
+          <span class="badge-dot"></span>
+          <span>Available for Work</span>
+        </div>
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Jawad <span class="gradient-text">Khan</span></h1>
+        <div class="hero-roles">
+          <span class="role-prefix"> </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+          <span class="role-prefix"> </span>
+        </div>
+        <p class="hero-description">
+          I build modern, responsive web applications using the MERN stack.
+          I care about clean code, fast performance, and user experiences
+          that actually work — on every device.
+        </p>
+        <div class="hero-cta d-flex flex-wrap gap-3">
+          <a href="#projects" class="btn btn-primary-custom">
+            <i class="fas fa-rocket me-2"></i>View My Projects
+          </a>
+          <a href="#contact" class="btn btn-outline-custom">
+            <i class="fas fa-envelope me-2"></i>Contact Me
+          </a>
+        </div>
+        <div class="hero-socials d-flex gap-3 mt-4">
+          <a href="https://github.com/jawadkh92552417" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jawad-khan-72622832a" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com/jawadkh92552417" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="mailto:jawadkhanahmad7@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual -->
+      <div class="col-lg-6 hero-visual d-flex justify-content-center" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+        <div class="hero-image-wrapper">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="hero-avatar">
+            <img src="images/profile.png" alt="Jawad Khan - Web Developer" />
+          </div>
+          <!-- Floating tech badges -->
+          <div class="tech-float tech-float-1" aria-hidden="true"><i class="fab fa-react"></i> React</div>
+          <div class="tech-float tech-float-2" aria-hidden="true"><i class="fab fa-node-js"></i> Node.js</div>
+          <div class="tech-float tech-float-3" aria-hidden="true"><i class="fab fa-js-square"></i> JS</div>
+          <div class="tech-float tech-float-4" aria-hidden="true"><i class="fab fa-html5"></i> HTML5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+  </a>
+</section>
+
+<!-- ========== ABOUT SECTION ========== -->
+<section class="about-section section-padding" id="about" aria-label="About section">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Get To Know Me</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      <p class="section-subtitle">Passionate developer building digital experiences</p>
+    </div>
+
+    <div class="row align-items-center g-5">
+      <!-- About Image / Code Card -->
+      <div class="col-lg-5" data-aos="fade-right" data-aos-duration="800">
+        <div class="about-code-card glass-card">
+          <div class="code-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="code-filename ms-2">about-jawad.js</span>
+          </div>
+          <div class="code-body">
+            <pre><code><span class="code-keyword">const</span> <span class="code-var">jawad</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"Jawad Khan"</span>,
+  <span class="code-prop">role</span>: <span class="code-str">"MERN Stack Developer"</span>,
+  <span class="code-prop">location</span>: <span class="code-str">"Pakistan 🇵🇰"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-str">"React"</span>, <span class="code-str">"Node.js"</span>,
+    <span class="code-str">"MongoDB"</span>, <span class="code-str">"Express"</span>
+  ],
+  <span class="code-prop">email</span>: <span class="code-str">"jawadkhanahmad7@gmail.com"</span>,
+  <span class="code-prop">github</span>: <span class="code-str">"jawadkh92552417"</span>,
+  <span class="code-prop">available</span>: <span class="code-bool">true</span>,
+  <span class="code-prop">hire</span>: () <span class="code-keyword">=></span> {
+    <span class="code-keyword">return</span> <span class="code-str">"Let's build something great!"</span>
+  }
+};</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Text -->
+      <div class="col-lg-7" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+        <h3 class="about-heading">I'm a <span class="gradient-text">Web Developer</span> who ships real, working products.</h3>
+        <p class="about-text">
+          Hi, I'm Jawad Khan — a MERN Stack Developer based in Pakistan. I build complete web
+          applications, from pixel-precise frontends in React to secure REST APIs in Node.js
+          and Express, backed by MongoDB.
+        </p>
+        <p class="about-text">
+          I'm self-taught, consistently learning, and I take pride in writing code that's
+          clean, readable, and maintainable. My goal is always the same: deliver a product
+          that works well, looks great, and solves a real problem.
+        </p>
+
+        <div class="about-stats row g-3 mt-3">
+          <div class="col-4">
+            <div class="stat-card glass-card text-center p-3">
+              <div class="stat-number gradient-text">8+</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-card glass-card text-center p-3">
+              <div class="stat-number gradient-text">2+</div>
+              <div class="stat-label">Years Coding</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-card glass-card text-center p-3">
+              <div class="stat-number gradient-text">10+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#projects" class="btn btn-primary-custom">
+            <i class="fas fa-folder-open me-2"></i>See My Work
+          </a>
+          <a href="mailto:jawadkhanahmad7@gmail.com?subject=CV%20Request%20—%20Jawad%20Khan" class="btn btn-outline-custom">
+            <i class="fas fa-file-alt me-2"></i>Request CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SKILLS SECTION ========== -->
+<section class="skills-section section-padding" id="skills" aria-label="Skills section">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      <p class="section-subtitle">Technologies and tools I work with</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- HTML5 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-html"><i class="fab fa-html5"></i></div>
+          <div class="skill-name">HTML5</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          <div class="skill-percent">95%</div>
+        </div>
+      </div>
+      <!-- CSS3 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="60">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-css"><i class="fab fa-css3-alt"></i></div>
+          <div class="skill-name">CSS3</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <div class="skill-percent">90%</div>
+        </div>
+      </div>
+      <!-- Bootstrap -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="120">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-bootstrap"><i class="fab fa-bootstrap"></i></div>
+          <div class="skill-name">Bootstrap</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <div class="skill-percent">90%</div>
+        </div>
+      </div>
+      <!-- JavaScript -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="180">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-js"><i class="fab fa-js-square"></i></div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <div class="skill-percent">85%</div>
+        </div>
+      </div>
+      <!-- React.js -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="240">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-react"><i class="fab fa-react"></i></div>
+          <div class="skill-name">React.js</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <div class="skill-percent">80%</div>
+        </div>
+      </div>
+      <!-- Node.js -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-node"><i class="fab fa-node-js"></i></div>
+          <div class="skill-name">Node.js</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          <div class="skill-percent">75%</div>
+        </div>
+      </div>
+      <!-- Express.js -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="360">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-express"><i class="fas fa-server"></i></div>
+          <div class="skill-name">Express.js</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          <div class="skill-percent">75%</div>
+        </div>
+      </div>
+      <!-- MongoDB -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="420">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-mongo"><i class="fas fa-database"></i></div>
+          <div class="skill-name">MongoDB</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          <div class="skill-percent">70%</div>
+        </div>
+      </div>
+      <!-- Git & GitHub -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="480">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-git"><i class="fab fa-git-alt"></i></div>
+          <div class="skill-name">Git &amp; GitHub</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <div class="skill-percent">85%</div>
+        </div>
+      </div>
+      <!-- Responsive Design -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="540">
+        <div class="skill-card glass-card text-center p-4">
+          <div class="skill-icon skill-responsive"><i class="fas fa-mobile-screen-button"></i></div>
+          <div class="skill-name">Responsive Design</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          <div class="skill-percent">92%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROJECTS SECTION ========== -->
+<section class="projects-section section-padding" id="projects" aria-label="Projects section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+      <p class="section-subtitle">Click a category to explore all my work in that area</p>
+    </div>
+
+    <!-- ── 3-Panel Layout ── -->
+    <div class="projects-panels" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Top Row: Frontend (left) + Backend (right) -->
+      <div class="panels-top-row">
+
+        <!-- Frontend Panel -->
+        <button class="panel-card panel-frontend" data-category="Frontend" aria-label="View Frontend Projects">
+          <div class="panel-bg-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
+          <div class="panel-content">
+            <div class="panel-icon-wrap">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="panel-title">Frontend</h3>
+            <p class="panel-subtitle">HTML · CSS · JS · React · Bootstrap</p>
+            <div class="panel-count" id="fe-count">0 Projects</div>
+            <div class="panel-cta">
+              <span>Explore Projects</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="panel-tech-pills" aria-hidden="true">
+            <span>HTML5</span><span>CSS3</span><span>React</span><span>Bootstrap</span>
+          </div>
+        </button>
+
+        <!-- Backend Panel -->
+        <button class="panel-card panel-backend" data-category="Backend" aria-label="View Backend Projects">
+          <div class="panel-bg-icon" aria-hidden="true"><i class="fas fa-server"></i></div>
+          <div class="panel-content">
+            <div class="panel-icon-wrap">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="panel-title">Backend</h3>
+            <p class="panel-subtitle">Node.js · Express · MongoDB · REST APIs</p>
+            <div class="panel-count" id="be-count">0 Projects</div>
+            <div class="panel-cta">
+              <span>Explore Projects</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="panel-tech-pills" aria-hidden="true">
+            <span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span>
+          </div>
+        </button>
+
+      </div><!-- /panels-top-row -->
+
+      <!-- Bottom Row: Full Stack (full width) -->
+      <button class="panel-card panel-fullstack" data-category="Full Stack" aria-label="View Full Stack Projects">
+        <div class="panel-bg-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+        <div class="panel-content">
+          <div class="panel-icon-wrap">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="panel-title">Full Stack</h3>
+          <p class="panel-subtitle">MERN Stack · Complete Web Applications</p>
+          <div class="panel-count" id="fs-count">0 Projects</div>
+          <div class="panel-cta">
+            <span>Explore Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="panel-tech-pills" aria-hidden="true">
+          <span>React</span><span>Node.js</span><span>MongoDB</span><span>Express</span><span>Socket.io</span>
+        </div>
+      </button>
+
+    </div><!-- /projects-panels -->
+
+  </div>
+</section>
+
+<!-- ========== PROJECT SHOWCASE OVERLAY ========== -->
+<div class="showcase-overlay" id="showcaseOverlay" role="dialog" aria-modal="true" aria-labelledby="showcaseTitle" hidden>
+  <div class="showcase-container">
+
+    <!-- Showcase Header -->
+    <div class="showcase-header">
+      <div class="showcase-header-left">
+        <div class="showcase-icon" id="showcaseIcon"></div>
+        <div>
+          <h2 class="showcase-title" id="showcaseTitle">Projects</h2>
+          <p class="showcase-meta" id="showcaseMeta"></p>
+        </div>
+      </div>
+      <button class="showcase-close" id="showcaseClose" aria-label="Close showcase">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Search inside showcase -->
+    <div class="showcase-search-wrap">
+      <i class="fas fa-search" aria-hidden="true"></i>
+      <input
+        type="search"
+        id="showcaseSearch"
+        class="showcase-search-input"
+        placeholder="Search projects..."
+        aria-label="Search projects"
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Projects grid inside showcase -->
+    <div class="showcase-grid" id="showcaseGrid" aria-live="polite">
+      <!-- Cards injected by JS -->
+    </div>
+
+    <!-- No results -->
+    <div class="showcase-no-results" id="showcaseNoResults" style="display:none;">
+      <i class="fas fa-search"></i>
+      <p>No projects found. Try a different keyword.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== PROJECT DETAIL MODAL ========== -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content glass-card border-0">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title gradient-text fw-bold" id="projectModalLabel">Project Details</h5>
+        <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-2">
+        <div class="modal-img-wrapper mb-4">
+          <img id="modalImage" src="" alt="" class="img-fluid rounded-3 w-100" loading="lazy" />
+        </div>
+        <div class="modal-category mb-2">
+          <span class="category-badge" id="modalCategory"></span>
+        </div>
+        <h4 class="modal-project-title mb-3" id="modalTitle"></h4>
+        <p class="modal-description mb-4" id="modalDescription"></p>
+        <div class="modal-tech mb-4">
+          <h6 class="modal-section-label"><i class="fas fa-code me-2"></i>Technologies Used</h6>
+          <div class="tech-badges" id="modalTechnologies"></div>
+        </div>
+        <div class="modal-actions d-flex flex-wrap gap-3">
+          <a id="modalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom">
+            <i class="fas fa-external-link-alt me-2"></i>Live Demo
+          </a>
+          <a id="modalGithubLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom">
+            <i class="fab fa-github me-2"></i>View Code
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CONTACT SECTION ========== -->
+<section class="contact-section section-padding" id="contact" aria-label="Contact section">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      <p class="section-subtitle">Have a project in mind? Let's work together!</p>
+    </div>
+
+    <div class="row g-5 justify-content-center">
+      <!-- Contact Info -->
+      <div class="col-lg-4" data-aos="fade-right" data-aos-duration="800">
+        <div class="contact-info d-flex flex-column gap-4">
+
+          <!-- Contact detail cards -->
+          <div class="contact-card glass-card p-4 d-flex align-items-center gap-3">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:jawadkhanahmad7@gmail.com" class="contact-value">jawadkhanahmad7@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card glass-card p-4 d-flex align-items-center gap-3">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <a href="https://github.com/jawadkh92552417" target="_blank" rel="noopener noreferrer" class="contact-value">github.com/jawadkh92552417</a>
+            </div>
+          </div>
+          <div class="contact-card glass-card p-4 d-flex align-items-center gap-3">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/jawad-khan-72622832a" target="_blank" rel="noopener noreferrer" class="contact-value">linkedin.com/in/jawad-khan</a>
+            </div>
+          </div>
+          <div class="contact-card glass-card p-4 d-flex align-items-center gap-3">
+            <div class="contact-icon"><i class="fa-brands fa-x-twitter"></i></div>
+            <div>
+              <div class="contact-label">X (Twitter)</div>
+              <a href="https://x.com/jawadkh92552417" target="_blank" rel="noopener noreferrer" class="contact-value">@jawadkh92552417</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+        <form class="contact-form glass-card p-4 p-lg-5" id="contactForm" novalidate aria-label="Contact form">
+          <div class="row g-3">
+
+            <!-- Web3Forms hidden fields -->
+            <input type="hidden" name="access_key" value="a3192439-b751-4f51-91b9-e2192cb54645" id="w3fAccessKey" />
+            <input type="hidden" name="subject"    value="New Message from Portfolio — Jawad Khan" />
+            <input type="hidden" name="from_name"  value="Jawad Khan Portfolio" />
+            <input type="checkbox" name="botcheck" style="display:none;" />
+
+            <div class="col-md-6">
+              <label for="contactName" class="form-label">Your Name</label>
+              <input type="text" name="name" class="form-control form-control-custom" id="contactName"
+                placeholder="User Name" required autocomplete="name" />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="contactEmail" class="form-label">Your Email</label>
+              <input type="email" name="email" class="form-control form-control-custom" id="contactEmail"
+                placeholder="Email@example.com" required autocomplete="email" />
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="col-12">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea name="message" class="form-control form-control-custom" id="contactMessage"
+                rows="5" placeholder="Tell me about your project or just say hello..." required></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary-custom w-100" id="sendBtn">
+                <i class="fas fa-paper-plane me-2"></i>Send Message
+              </button>
+            </div>
+            <div class="col-12">
+              <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="footer-brand">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">Jawad</span>
+        <span class="brand-accent">Khan</span>
+        <span class="brand-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy mb-0">
+        &copy; <span id="footerYear"></span> Jawad Khan. Built with <i class="fas fa-heart text-danger"></i> and passion.
+      </p>
+      <div class="footer-socials d-flex gap-3">
+        <a href="https://github.com/jawadkh92552417" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jawad-khan-72622832a" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://x.com/jawadkh92552417" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="mailto:jawadkhanahmad7@gmail.com" class="social-icon" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/923109743377"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="whatsapp-float"
+   id="whatsappFloat"
+   aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+</a>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- Projects Data (load FIRST so projects array is available) -->
+<script src="js/projects.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+<!-- Neon Cursor Trail Effect (desktop only) -->
+<script src="js/cursor-trail.js"></script>
+</body>
+</html>
