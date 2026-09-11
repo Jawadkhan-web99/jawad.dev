@@ -22,36 +22,6 @@ export const projects = [
     liveLink: "https://travel-website-project-smtj.vercel.app/",
     githubLink: "https://github.com/jawadkh92552417/travelx"
   },
-  {
-    title: "pH Scale — Interactive Tool",
-    image: "/images/phscale.png",
-    description:
-      "An interactive educational pH scale visualization showing acidity and alkalinity levels from 0 to 14. Clean UI with color-coded indicators and real-time value display.",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
-    category: "Frontend",
-    liveLink: "https://https-github-com-jawadkhan-web99-my.vercel.app/",
-    githubLink: "https://github.com/jawadkh92552417"
-  },
-  {
-    title: "MediCare — Hospital Website",
-    image: "/images/hospital.png",
-    description:
-      "A professional hospital management website featuring doctor profiles, department listings, appointment booking form, and a trust-focused medical design.",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
-    category: "Frontend",
-    liveLink: "https://hospital-website.vercel.app",
-    githubLink: "https://github.com/jawadkh92552417/hospital-website"
-  },
-  {
-    title: "ShopZone — React E-Commerce",
-    image: "/images/ecommerce.png",
-    description:
-      "A feature-rich e-commerce store built with React. Includes product listing, cart management with Context API, category filtering, and localStorage persistence.",
-    technologies: ["React", "CSS3", "Context API", "React Router"],
-    category: "Frontend",
-    liveLink: "https://react-store-jk.vercel.app",
-    githubLink: "https://github.com/jawadkh92552417/react-ecommerce"
-  },
 
   /* ═══════════════════════════════════════
      BACKEND PROJECTS
