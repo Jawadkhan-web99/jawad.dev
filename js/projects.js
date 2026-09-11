@@ -39,7 +39,7 @@ const projects = [
 
   {
     title: "TravelX — Travel Agency Website",
-    image: "images/travelx.png",
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
     description:
       "A fully responsive travel agency website with destination galleries, animated hero sections, tour packages UI, and smooth scroll interactions. Optimized for all screen sizes.",
     technologies: ["HTML5", "CSS3", "Bootstrap 5", "JavaScript"],
