@@ -79,10 +79,32 @@ const projects = [
   ═══════════════════════════════════════ */
 
   {
-    title: "Jawad's Dev Portfolio",
-    image: "images/portfolio.png",
+    title: "Blingg — Luxury Jewelry E-Commerce",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80",
     description:
-      "This portfolio website — built from scratch with vanilla HTML, CSS, and JavaScript. Features dark/light mode, animated UI, project showcase system, and a working contact form.",
+      "A luxury full-stack e-commerce jewelry store platform featuring fine collections (rings, bracelets, earrings, necklaces), interactive shopping bag, smooth Lenis scrolling, and GSAP animations.",
+    technologies: ["Full Stack", "JavaScript", "GSAP", "Lenis Scroll", "Swiper.js", "REST API"],
+    category: "Full Stack",
+    liveLink: "https://e-commerce-website-seven-swart.vercel.app/",
+    githubLink: "https://github.com/jawadkh92552417/e-commerce-website"
+  },
+
+  {
+    title: "NEUROFIT — AI Fitness & Training",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+    description:
+      "An elite AI-powered fitness and smart performance training platform engineered with 3D graphics (Three.js), dynamic progression metrics, interactive coaching, and GSAP animations.",
+    technologies: ["Full Stack", "Three.js", "GSAP", "AI Integration", "Interactive 3D", "Lucide"],
+    category: "Full Stack",
+    liveLink: "https://gym-website-pi-nine.vercel.app/",
+    githubLink: "https://github.com/jawadkh92552417/gym-website"
+  },
+
+  {
+    title: "Jawad's Dev Portfolio",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+    description:
+      "This portfolio website — built from scratch with modern UI enhancements. Features dark/light mode, animated UI, project showcase system, and a working contact form.",
     technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Web3Forms"],
     category: "Full Stack",
     liveLink: "#",
@@ -91,13 +113,13 @@ const projects = [
 
   {
     title: "MERN Blog Platform",
-    image: "images/blog.png",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
     description:
       "A full-stack blog platform with JWT authentication, rich-text post creation, comments, and an admin dashboard — built on the complete MERN stack.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "JWT"],
     category: "Full Stack",
     liveLink: "https://mern-blog-jk.vercel.app",
     githubLink: "https://github.com/jawadkh92552417/mern-blog"
-  },
+  }
 
 ];
