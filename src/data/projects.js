@@ -22,10 +22,40 @@ export const projects = [
     liveLink: "https://travel-website-project-smtj.vercel.app/",
     githubLink: "https://github.com/jawadkh92552417/travelx"
   },
+  {
+    title: "TazaMart — Online Grocery Store",
+    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
+    description:
+      "A modern, responsive online grocery store connecting homes to fresh farm produce with same-day delivery, dark/light mode, product galleries, and instant ordering UI.",
+    technologies: ["React", "Vite", "CSS3", "React Router", "Web3Forms"],
+    category: "Frontend",
+    liveLink: "https://online-grocery-store-website.vercel.app/",
+    githubLink: "https://github.com/Jawadkhan-web99/Online-Grocery-Store-website"
+  },
+  {
+    title: "50 JavaScript Projects — Master Showcase",
+    image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800&q=80",
+    description:
+      "A master suite of 50 interactive, production-grade Vanilla JavaScript web applications including games, productivity timers, financial calculators, media players, and Web APIs.",
+    technologies: ["JavaScript", "HTML5", "CSS3", "Bootstrap 5", "Web APIs"],
+    category: "Frontend",
+    liveLink: "https://java-script-50-project.vercel.app/",
+    githubLink: "https://github.com/Jawadkhan-web99/JavaScript-50-Project"
+  },
 
   /* ═══════════════════════════════════════
      BACKEND PROJECTS
   ═══════════════════════════════════════ */
+  {
+    title: "SmartExam Pro — Online Examination & Result System",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+    description:
+      "An AI-powered computer-based testing and proctoring platform with automated evaluation, secure authentication, student/teacher portals, dynamic analytics, and digital certificates.",
+    technologies: ["Firebase", "Cloud Firestore", "Authentication", "React 19", "Tailwind CSS", "Recharts"],
+    category: "Backend",
+    liveLink: "https://online-exam-system-ruddy.vercel.app/",
+    githubLink: "https://github.com/Jawadkhan-web99/online-exam-system"
+  },
   {
     title: "TaskFlow — REST API",
     image: "/images/taskapi.png",
